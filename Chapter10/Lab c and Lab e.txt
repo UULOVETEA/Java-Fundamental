@@ -1,0 +1,109 @@
+Program Logic for Lab 7c and 7e combined into one program: CreatingExceptions.java
+
+	1. public static void main (String[] args throws OutOfBoundsException, InvalidDocumentCodeException)
+
+	2. create the scanner object for input
+
+	3. create the 2 exceptions
+	   OutOfBoundsException outOfRange = new OutOfBoundsException("String is too long");
+	   InvalidDocumentCodeException invalid = new InvalidDocumentCodeException("Invalid code in position 1");
+
+	4. while(  ) statement
+
+	5. give the directions: no more than 20 characters, first character C, P, or U
+
+	6. create a string for the product line and the length of the product as an integer
+
+	7. try section: check the length
+
+	8. catch section: 
+	   catch(OutOfBoundsException e())
+	   {
+		System.out.println(outOfRange);
+	   }
+
+	9. try section: check for the U, C, and P
+
+       10. catch section
+
+Program for the OutOfBoundsException
+
+	public class OutOfBoundsException(String message)
+	{
+		// send error message back to try/catch
+		super(message);
+	}
+
+Structure
+
+	CreatingExceptions
+	{
+		public static void main (etc...)
+		{
+			step 2-10
+		}
+	}
+
+	2 helper classes starting with OutOfBoundsException
+
+
+
+
+import scanner class
+
+public class Creating Exceptions
+{
+	public static void main(__________) throws ________________, __________________
+	{
+		Scanner scan = new Scanner(System.in);
+
+		OutOfBoundsException outOfRange = new OutOfBoundsException("String is too long");
+	  	InvalidDocumentCodeException invalid = new InvalidDocumentCodeException("Invalid code in position 1");
+
+		while (true)
+		{
+			System.out.println(____________directions: <=20 characters and begin with U, C, P);
+			String str = ______________;
+			int length = ______________:
+
+			try
+			{
+				if(length > 20) throw outOfRange
+			}
+
+			catch(OutOfBoundsException e)
+			{
+				System.out.println(outOfRange);
+			}
+
+			try
+			{
+				// check the first character in str to make sure it is U, C, or P
+				if(str chat(0))
+			}
+
+			catch(InvalidDocumentCodeException e)
+			{
+				// see above			
+				System.out.println(invalid)
+			}
+		}
+	}
+}
+
+public class OutOfBoundsException extends Exception
+{
+	OutOfBoundsException(String message)
+	{
+		super(message);
+	}
+}
+
+// reapeat for the InvalidDocumentCodeException 
+public class InvalidDocumentCodeException extends Exception
+{
+	InvalidDocumentCodeException (String message)
+	{
+		super(message);
+	}
+}
